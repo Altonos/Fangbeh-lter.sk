@@ -7,6 +7,10 @@ on right click with spawner on entity:
 	clicked entity is not a player
 	delete entity
 	set {_fangbehälter} to "%clicked entity% Spawn egg"
-	set {_fangbehälter} to {_fangbehälter}  parsed as item type
+	set {_fangbehälter} to {_fangbehälter} parsed as item type
 	drop {_fangbehälter}
 	remove 1 spawner named "&4Fangbehälter" from player's inventory
+
+
+on click with spawner:
+	cancel event
