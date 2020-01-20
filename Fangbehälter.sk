@@ -1,0 +1,12 @@
+on load:
+	register new shapeless recipe for spawner named "&4Fangbehälter" using iron ingot, diamond, iron ingot, diamond, egg, diamond, iron ingot, diamond, iron ingot
+
+
+on right click with spawner on entity:
+	player's tool is a spawner named "&4Fangbehälter"
+	clicked entity is not a player
+	delete entity
+	set {_fangbehälter} to "%clicked entity% Spawn egg"
+	set {_fangbehälter} to {_fangbehälter}  parsed as item type
+	drop {_fangbehälter}
+	remove 1 spawner named "&4Fangbehälter" from player's inventory
